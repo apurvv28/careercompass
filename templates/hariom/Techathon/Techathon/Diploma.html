@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diploma in Engineering - Explore Fields</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        body { background: linear-gradient(135deg, #4e73df, #224abe); color: white; text-align: center; padding: 20px; }
+        h1 { font-size: 36px; margin-bottom: 20px; animation: fadeIn 1.5s ease-in-out; color: #f0f8ff; }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p { font-size: 18px; margin-bottom: 15px; color: #d6e4f1; }
+
+        .branches { 
+            text-align: left; 
+            margin: 20px auto; 
+            padding: 15px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+        }
+
+        .branch img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ffcc00;
+            display: block;
+            margin-left: auto;  
+            margin-right: auto; 
+        }
+
+        .branch {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .branch:hover { 
+            background: #1e3c72; 
+            color: #ffcc00; 
+            transform: scale(1.05); 
+        }
+
+        .branch-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        .branch-description {
+            font-size: 16px;
+            color: #d6e4f1;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .branch ul {
+            text-align: left;
+            font-size: 16px;
+            color: #d6e4f1;
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin-top: 20px; 
+            background: #ffcc00; 
+            color: #333; 
+            font-weight: bold; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: 0.3s; 
+        }
+        .btn:hover { background: #ffaa00; transform: scale(1.1); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Diploma in Engineering - Explore Fields</h1>
+    
+    <div class="container">
+        <p>A Diploma in Engineering is a 3-year program focused on practical skills and technical knowledge to prepare students for entry-level positions in various engineering fields. Unlike a full engineering degree, which takes four years, a diploma program is more hands-on and is designed to provide students with the essential skills for industry jobs.</p>
+
+        <h2>The Key Differences Between a Diploma and Engineering Degree:</h2>
+        <ul>
+            <li><strong>Duration:</strong> Diploma programs typically last 3 years, while an Engineering degree requires 4 years of study.</li>
+            <li><strong>Focus:</strong> Diplomas focus more on practical training and skills needed for technical roles, whereas Engineering degrees involve theoretical knowledge and advanced concepts.</li>
+            <li><strong>Career Opportunities:</strong> While both paths offer solid career opportunities, Engineering graduates often have a broader range of roles available, including managerial and research positions.</li>
+            <li><strong>Educational Level:</strong> A diploma is a lower-level qualification compared to a full engineering degree. However, diploma holders can further pursue a degree later through lateral entry into the second year of engineering.</li>
+        </ul>
+
+        <p>Here are some of the major branches available in Diploma programs in Engineering:</p>
+        
+        <div class="branches">
+            <!-- Mechanical Engineering -->
+            <div class="branch">
+                <img src="mechanical.png" alt="Mechanical Engineering">
+                <div class="branch-header">⚙️ Mechanical Engineering</div>
+                <div class="branch-description">
+                    Mechanical engineering involves the design, analysis, and manufacturing of machines, engines, and other mechanical systems.
+                </div>
+                <ul>
+                    <li>Thermodynamics</li>
+                    <li>Fluid Mechanics</li>
+                    <li>Machine Design</li>
+                    <li>Manufacturing Process</li>
+                </ul>
+            </div>
+
+            <!-- Civil Engineering -->
+            <div class="branch">
+                <img src="engineer.png" alt="Civil Engineering">
+                <div class="branch-header">🏗️ Civil Engineering</div>
+                <div class="branch-description">
+                    Civil engineering focuses on the construction and maintenance of infrastructure such as buildings, roads, bridges, and water supply systems.
+                </div>
+                <ul>
+                    <li>Structural Analysis</li>
+                    <li>Construction Materials</li>
+                    <li>Geotechnical Engineering</li>
+                    <li>Surveying</li>
+                </ul>
+            </div>
+
+            <!-- Electrical Engineering -->
+            <div class="branch">
+                <img src="engineering (1).png" alt="Electrical Engineering">
+                <div class="branch-header">⚡ Electrical Engineering</div>
+                <div class="branch-description">
+                    Electrical engineering covers the study of electrical systems, including power generation, transmission, and distribution, as well as control systems.
+                </div>
+                <ul>
+                    <li>Electrical Circuits</li>
+                    <li>Power Systems</li>
+                    <li>Digital Electronics</li>
+                    <li>Control Systems</li>
+                </ul>
+            </div>
+
+            <!-- Electronics and Communication Engineering -->
+            <div class="branch">
+                <img src="mechatronics.png" alt="Electronics and Communication Engineering">
+                <div class="branch-header">📡 Electronics and Communication Engineering</div>
+                <div class="branch-description">
+                    This field focuses on the design and development of electronic systems and communication equipment, including radio, television, and networking devices.
+                </div>
+                <ul>
+                    <li>Analog and Digital Circuits</li>
+                    <li>Signal Processing</li>
+                    <li>Telecommunication Systems</li>
+                    <li>Embedded Systems</li>
+                </ul>
+            </div>
+
+            <!-- Computer Engineering -->
+            <div class="branch">
+                <img src="IT.png" alt="Computer Engineering">
+                <div class="branch-header">💻 Computer Engineering</div>
+                <div class="branch-description">
+                    Computer engineering focuses on the hardware and software aspects of computing systems, including microprocessors, networking, and software development.
+                </div>
+                <ul>
+                    <li>Computer Networks</li>
+                    <li>Programming Languages</li>
+                    <li>Microcontrollers</li>
+                    <li>Data Structures and Algorithms</li>
+                </ul>
+            </div>
+
+            <!-- Automobile Engineering -->
+            <div class="branch">
+                <img src="automobile.png" alt="Automobile Engineering">
+                <div class="branch-header">🚗 Automobile Engineering</div>
+                <div class="branch-description">
+                    Automobile engineering focuses on the design, development, and manufacturing of vehicles such as cars, trucks, and other transport systems.
+                </div>
+                <ul>
+                    <li>Vehicle Dynamics</li>
+                    <li>Engine Design</li>
+                    <li>Automobile Materials</li>
+                    <li>Automobile Electronics</li>
+                </ul>
+            </div>
+
+            <!-- Chemical Engineering -->
+            <div class="branch">
+                <img src="chemistry.png" alt="Chemical Engineering">
+                <div class="branch-header">🧪 Chemical Engineering</div>
+                <div class="branch-description">
+                    Chemical engineering involves the application of chemistry, physics, and biology to develop processes for the production of chemicals, pharmaceuticals, and materials.
+                </div>
+                <ul>
+                    <li>Chemical Reaction Engineering</li>
+                    <li>Process Design</li>
+                    <li>Environmental Engineering</li>
+                    <li>Pharmaceutical Engineering</li>
+                </ul>
+            </div>
+
+            <!-- Architecture Engineering -->
+            <div class="branch">
+                <img src="engineer (1).png" alt="Architecture Engineering">
+                <div class="branch-header">🏛️ Architecture Engineering</div>
+                <div class="branch-description">
+                    This branch combines principles of civil engineering and architecture to design and construct buildings and other structures with technical precision.
+                </div>
+                <ul>
+                    <li>Building Materials</li>
+                    <li>Structural Design</li>
+                    <li>Environmental Systems</li>
+                    <li>Construction Management</li>
+                </ul>
+            </div>
+
+            <!-- Industrial Engineering (New) -->
+            <div class="branch">
+                <img src="infrastructure.png" alt="Industrial Engineering">
+                <div class="branch-header">🏭 Industrial Engineering</div>
+                <div class="branch-description">
+                    Industrial engineering focuses on optimizing complex systems and processes in manufacturing, operations, and logistics to improve efficiency and reduce waste.
+                </div>
+                <ul>
+                    <li>Operations Research</li>
+                    <li>Manufacturing Systems</li>
+                    <li>Quality Control</li>
+                    <li>Supply Chain Management</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>

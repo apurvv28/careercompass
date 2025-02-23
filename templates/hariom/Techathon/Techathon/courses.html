@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        #searchBar {
+            padding: 10px;
+            width: 50%;
+            font-size: 18px;
+            border: 2px solid #0d47a1;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .course-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 8px solid #2196f3;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            min-height: 300px;
+        }
+
+        .course-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #0d47a1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1976d2;
+        }
+
+        .course-description {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .course-duration {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .course-level {
+            font-size: 16px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #0d47a1;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        #noResults {
+            display: none;
+            font-size: 20px;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Available Courses</h2>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search for a course..." onkeyup="filterCourses()">
+    </div>
+    <div id="noResults">Sorry, no courses found.</div>
+    <div class="container" id="courseContainer">
+        <script>
+            const courses = [
+                { title: "Mobile App Development", icon: "📱", description: "Learn Android & iOS development using modern frameworks.", duration: "6 months", level: "Beginner" },
+                { title: "Web Development", icon: "🌐", description: "Learn HTML, CSS, JavaScript, and frameworks like React.", duration: "5 months", level: "Intermediate" },
+                { title: "Data Science", icon: "📊", description: "Explore Python, machine learning, and data visualization.", duration: "8 months", level: "Advanced" },
+                { title: "Cyber Security", icon: "🔒", description: "Understand ethical hacking, penetration testing, and threat detection.", duration: "7 months", level: "Advanced" },
+                { title: "Cloud Computing", icon: "☁", description: "Master AWS, Azure, Google Cloud, and cloud architecture.", duration: "6 months", level: "Intermediate" },
+                { title: "Artificial Intelligence", icon: "🤖", description: "Develop AI models using Python, TensorFlow, and deep learning.", duration: "9 months", level: "Advanced" },
+                { title: "Graphic Design", icon: "🎨", description: "Learn Photoshop, Illustrator, and UI/UX design principles.", duration: "4 months", level: "Beginner" },
+                { title: "Digital Marketing", icon: "📢", description: "Master SEO, PPC, social media marketing, and branding.", duration: "6 months", level: "Intermediate" },
+                { title: "Networking", icon: "🌍", description: "Learn Cisco networking, routing, switching, and network security.", duration: "6 months", level: "Intermediate" },
+                { title: "Robotics", icon: "🤖", description: "Build and program robots using Arduino and Raspberry Pi.", duration: "7 months", level: "Advanced" },
+                { title: "Game Development", icon: "🎮", description: "Create 2D & 3D games using Unity and Unreal Engine.", duration: "7 months", level: "Intermediate" },
+                { title: "Blockchain Development", icon: "⛓", description: "Learn blockchain technology, smart contracts, and cryptocurrencies.", duration: "8 months", level: "Advanced" },
+                { title: "Software Testing", icon: "🧪", description: "Master manual and automated testing tools like Selenium.", duration: "6 months", level: "Intermediate" },
+                { title: "DevOps", icon: "⚙", description: "Learn CI/CD, Kubernetes, Docker, and cloud deployment.", duration: "7 months", level: "Advanced" },
+                { title: "UI/UX Design", icon: "🎨", description: "Design intuitive user experiences with Figma & Adobe XD.", duration: "5 months", level: "Beginner" },
+                { title: "Ethical Hacking", icon: "🔓", description: "Learn penetration testing, Kali Linux, and cybersecurity techniques.", duration: "7 months", level: "Advanced" },
+                { title: "Full Stack Development", icon: "🖥", description: "Master front-end & back-end development with MERN stack.", duration: "8 months", level: "Advanced" },
+                { title: "Business Intelligence", icon: "📊", description: "Analyze data using Power BI, Tableau, and SQL.", duration: "6 months", level: "Intermediate" },
+                { title: "Big Data Analytics", icon: "📉", description: "Learn Hadoop, Spark, and data warehousing.", duration: "8 months", level: "Advanced" },
+                { title: "Finance & Investment", icon: "💰", description: "Understand stock markets, mutual funds, and financial planning.", duration: "6 months", level: "Beginner" },
+                { title: "Human Resource Management", icon: "👥", description: "Learn recruitment, payroll, and workforce management.", duration: "5 months", level: "Beginner" },
+                { title: "Entrepreneurship", icon: "🚀", description: "Develop business ideas, funding strategies, and scaling techniques.", duration: "6 months", level: "Intermediate" },
+                { title: "Photography", icon: "📷", description: "Master DSLR, mobile photography, and photo editing.", duration: "4 months", level: "Beginner" },
+                { title: "Film Making", icon: "🎬", description: "Learn screenwriting, cinematography, and post-production.", duration: "8 months", level: "Intermediate" },
+                { title: "Music Theory", icon: "🎼", description: "Understand notes, chords, and composition techniques.", duration: "6 months", level: "Beginner" },
+                { title: "Yoga & Wellness", icon: "🧘", description: "Learn meditation, stress management, and holistic wellness.", duration: "5 months", level: "Beginner" },
+                { title: "Psychology", icon: "🧠", description: "Study human behavior, mental health, and therapy techniques.", duration: "7 months", level: "Intermediate" },
+                { title: "Artificial Neural Networks", icon: "🖥", description: "Develop deep learning models for AI applications.", duration: "9 months", level: "Advanced" },
+                { title: "Embedded Systems", icon: "🔌", description: "Work with microcontrollers, IoT, and real-time systems.", duration: "7 months", level: "Intermediate" },
+                { title: "Quantum Computing", icon: "⚛", description: "Understand quantum mechanics and its applications in computing.", duration: "9 months", level: "Advanced" },
+    { title: "3D Animation", icon: "🎥", description: "Create animations using Blender, Maya, and 3ds Max.", duration: "6 months", level: "Intermediate" },
+    { title: "Augmented Reality (AR) & Virtual Reality (VR)", icon: "🕶", description: "Develop immersive AR & VR experiences using Unity.", duration: "7 months", level: "Advanced" },
+    { title: "Internet of Things (IoT)", icon: "🌎", description: "Learn about smart devices, sensors, and IoT applications.", duration: "7 months", level: "Intermediate" },
+    { title: "Astronomy & Astrophysics", icon: "🔭", description: "Explore the universe, celestial bodies, and space technologies.", duration: "8 months", level: "Beginner" },
+    { title: "Sustainable Energy", icon: "🌞", description: "Study renewable energy sources like solar, wind, and hydro power.", duration: "6 months", level: "Intermediate" },
+    { title: "Automobile Engineering", icon: "🚗", description: "Learn about vehicle design, electric vehicles, and automotive tech.", duration: "7 months", level: "Intermediate" },
+    { title: "Nanotechnology", icon: "🧪", description: "Study nanomaterials, nanomedicine, and industrial applications.", duration: "8 months", level: "Advanced" },
+    { title: "Space Technology", icon: "🚀", description: "Understand satellite design, space missions, and rocket propulsion.", duration: "9 months", level: "Advanced" },
+    { title: "Biotechnology", icon: "🧬", description: "Explore genetic engineering, biomedical research, and biotech innovations.", duration: "8 months", level: "Advanced" },
+    { title: "Forensic Science", icon: "🔍", description: "Learn crime scene investigation, fingerprint analysis, and DNA profiling.", duration: "7 months", level: "Intermediate" },
+    { title: "Marine Biology", icon: "🐠", description: "Study ocean ecosystems, marine species, and conservation methods.", duration: "7 months", level: "Intermediate" },
+    { title: "Sports Analytics", icon: "⚽", description: "Use data science to analyze sports performance and strategies.", duration: "6 months", level: "Intermediate" },
+    { title: "Fashion Designing", icon: "👗", description: "Master fashion illustration, textile design, and garment production.", duration: "6 months", level: "Beginner" },
+    { title: "Interior Designing", icon: "🏠", description: "Learn space planning, color theory, and furniture design.", duration: "6 months", level: "Beginner" },
+    { title: "Culinary Arts", icon: "🍳", description: "Become a master chef by learning global cuisines and cooking techniques.", duration: "6 months", level: "Beginner" },
+    { title: "E-commerce Management", icon: "🛍", description: "Build and scale online businesses using Shopify, WooCommerce, and marketing tools.", duration: "5 months", level: "Intermediate" },
+    { title: "Language Translation & Interpretation", icon: "🗣", description: "Develop skills in translating and interpreting multiple languages.", duration: "6 months", level: "Intermediate" },
+    { title: "Wildlife Conservation", icon: "🐅", description: "Learn about endangered species, habitat protection, and conservation techniques.", duration: "7 months", level: "Intermediate" },
+    { title: "Handwriting Analysis", icon: "✍", description: "Study graphology and understand personality traits through handwriting.", duration: "5 months", level: "Beginner" }
+];
+
+            const courseContainer = document.getElementById("courseContainer");
+
+            courses.forEach(course => {
+                const card = document.createElement("div");
+                card.classList.add("course-card");
+                card.innerHTML = `
+                    <span class="icon">${course.icon}</span>
+                    <div class="course-title">${course.title}</div>
+                    <div class="course-description">${course.description}</div>
+                    <div class="course-duration">Duration: ${course.duration}</div>
+                    <div class="course-level">Level: ${course.level}</div>
+                `;
+                courseContainer.appendChild(card);
+            });
+        </script>
+    </div>
+    <script>
+        function filterCourses() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let courses = document.getElementsByClassName('course-card');
+            let found = false;
+            for (let i = 0; i < courses.length; i++) {
+                let title = courses[i].getElementsByClassName('course-title')[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    courses[i].style.display = "flex";
+                    found = true;
+                } else {
+                    courses[i].style.display = "none";
+                }
+            }
+            document.getElementById('noResults').style.display = found ? "none" : "block";
+        }
+    </script>
+</body>
+
+</html>

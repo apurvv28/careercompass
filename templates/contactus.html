@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Career Consultancy</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .about-section {
+            padding: 40px;
+            background: #ffffff;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            margin: auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .title {
+            font-size: 28px;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .contact-form button {
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .contact-form button:hover {
+            background: #4f6fd6;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-icon {
+            font-size: 30px;
+            margin: 10px;
+            color: #1e3a8a;
+            text-decoration: none;
+            transition: 0.3s;
+            max-height: 100px;
+            max-width: 100px;
+        }
+        .social-icon:hover {
+            color: #4f6fd6;
+        }
+        .footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Career Consultancy</div>
+    <section class="about-section">
+        <h2 class="title">About Us</h2>
+        <p class="subtitle">We are a career consultancy service dedicated to guiding professionals toward their dream jobs. Get expert advice, resume building, and job search assistance from our team.</p>
+    </section>
+    <section class="contact-section">
+        <h2 class="title">Get in Touch</h2>
+        <p class="subtitle">We would love to hear from you. Let's build your career together!</p>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="social-links">
+            <a href="#" class="social-icon"><img src="insta.png"></a>
+            <a href="#" class="social-icon"><img src="x.png"></a>
+            <a href="#" class="social-icon"><img src="facebook.png"></a>
+            <a href="#" class="social-icon"><img src="github.png"></a>
+        </div>
+    </section>
+    <div class="footer">&copy; 2025 Career Consultancy. All rights reserved.</div>
+</body>
+</html>

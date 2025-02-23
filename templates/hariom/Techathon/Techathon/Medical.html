@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Careers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        body { background: linear-gradient(135deg, #8e44ad, #6a1b9a); color: white; text-align: center; padding: 20px; }
+        h1 { font-size: 36px; margin-bottom: 20px; animation: fadeIn 1.5s ease-in-out; color: #f0f8ff; }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p { font-size: 18px; margin-bottom: 15px; color: #d6e4f1; }
+
+        .branches { 
+            text-align: left; 
+            margin: 20px auto; 
+            padding: 15px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+        }
+
+        /* Add border to the images */
+        .branch img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ffcc00; /* Adds a yellow border */
+            display: block; /* Centers the image in the card */
+            margin-left: auto;  /* Centers horizontally */
+            margin-right: auto; /* Centers horizontally */
+        }
+
+        /* Justify content inside the card */
+        .branch {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* This ensures the content is spaced evenly */
+            height: 100%;
+        }
+
+        .branch:hover { 
+            background: #6a1b9a; 
+            color: #ffcc00; 
+            transform: scale(1.05); 
+        }
+
+        .branch-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        .branch-description {
+            font-size: 16px;
+            color: #d6e4f1;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .branch ul {
+            text-align: left;
+            font-size: 16px;
+            color: #d6e4f1;
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin-top: 20px; 
+            background: #ffcc00; 
+            color: #333; 
+            font-weight: bold; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: 0.3s; 
+        }
+        .btn:hover { background: #ffaa00; transform: scale(1.1); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Medical Careers - Explore Medical Fields</h1>
+    
+    <div class="container">
+        <p>Medicine is a broad and evolving field that combines science and compassion to diagnose, treat, and prevent illnesses and injuries.</p>
+        <p>Here are some major branches of medicine:</p>
+        
+        <div class="branches">
+            <!-- General Medicine -->
+            <div class="branch">
+                <img src="health (1).png" alt="General Medicine">
+                <div class="branch-header">🩺 General Medicine</div>
+                <div class="branch-description">
+                    General medicine focuses on diagnosing and treating a wide range of medical conditions. It's often the first step in patient care.
+                </div>
+                <ul>
+                    <li>Internal Medicine</li>
+                    <li>Family Practice</li>
+                    <li>Primary Care</li>
+                </ul>
+            </div>
+
+            <!-- Surgery -->
+            <div class="branch">
+                <img src="hospital.png" alt="Surgery">
+                <div class="branch-header">🔪 Surgery</div>
+                <div class="branch-description">
+                    Surgery involves the use of medical procedures to treat or prevent diseases, injuries, and other medical conditions.
+                </div>
+                <ul>
+                    <li>Cardiothoracic Surgery</li>
+                    <li>Orthopedic Surgery</li>
+                    <li>Neurosurgery</li>
+                </ul>
+            </div>
+
+            <!-- Pediatrics -->
+            <div class="branch">
+                <img src="pediatrics.png" alt="Pediatrics">
+                <div class="branch-header">👶 Pediatrics</div>
+                <div class="branch-description">
+                    Pediatrics is the branch of medicine dealing with the health and medical care of infants, children, and adolescents.
+                </div>
+                <ul>
+                    <li>Neonatology</li>
+                    <li>Pediatric Cardiology</li>
+                    <li>Pediatric Neurology</li>
+                </ul>
+            </div>
+
+            <!-- Obstetrics and Gynecology -->
+            <div class="branch">
+                <img src="obstetrics.png" alt="Obstetrics and Gynecology">
+                <div class="branch-header">🤰 Obstetrics & Gynecology</div>
+                <div class="branch-description">
+                    Obstetrics and Gynecology specialize in female reproductive health, childbirth, and the management of pregnancy and childbirth-related conditions.
+                </div>
+                <ul>
+                    <li>Reproductive Medicine</li>
+                    <li>Maternal-Fetal Medicine</li>
+                    <li>Gynecologic Oncology</li>
+                </ul>
+            </div>
+
+            <!-- Psychiatry -->
+            <div class="branch">
+                <img src="psychiatry.png" alt="Psychiatry">
+                <div class="branch-header">🧠 Psychiatry</div>
+                <div class="branch-description">
+                    Psychiatry focuses on the diagnosis, treatment, and prevention of mental health disorders such as depression, anxiety, and schizophrenia.
+                </div>
+                <ul>
+                    <li>Psychotherapy</li>
+                    <li>Psychopharmacology</li>
+                    <li>Child and Adolescent Psychiatry</li>
+                </ul>
+            </div>
+
+            <!-- Dermatology -->
+            <div class="branch">
+                <img src="skin.png" alt="Dermatology">
+                <div class="branch-header">🧴 Dermatology</div>
+                <div class="branch-description">
+                    Dermatology specializes in diagnosing and treating skin conditions, hair disorders, and cosmetic issues affecting the skin.
+                </div>
+                <ul>
+                    <li>Acne Treatment</li>
+                    <li>Skin Cancer Surgery</li>
+                    <li>Cosmetic Dermatology</li>
+                </ul>
+            </div>
+
+            <!-- Cardiology -->
+            <div class="branch">
+                <img src="medical-check.png" alt="Cardiology">
+                <div class="branch-header">❤️ Cardiology</div>
+                <div class="branch-description">
+                    Cardiology focuses on diagnosing and treating heart-related conditions, such as coronary artery disease, heart failure, and arrhythmias.
+                </div>
+                <ul>
+                    <li>Cardiac Imaging</li>
+                    <li>Interventional Cardiology</li>
+                    <li>Electrophysiology</li>
+                </ul>
+            </div>
+
+            <!-- Neurology -->
+            <div class="branch">
+                <img src="neurology.png" alt="Neurology">
+                <div class="branch-header">🧠 Neurology</div>
+                <div class="branch-description">
+                    Neurology deals with the diagnosis and treatment of disorders of the nervous system, including the brain, spinal cord, and peripheral nerves.
+                </div>
+                <ul>
+                    <li>Epilepsy</li>
+                    <li>Stroke</li>
+                    <li>Parkinson’s Disease</li>
+                </ul>
+            </div>
+
+            <!-- Orthopedics -->
+            <div class="branch">
+                <img src="orthopedics.png" alt="Orthopedics">
+                <div class="branch-header">🦵 Orthopedics</div>
+                <div class="branch-description">
+                    Orthopedics specializes in the diagnosis and treatment of musculoskeletal conditions, such as fractures, joint disorders, and spine injuries.
+                </div>
+                <ul>
+                    <li>Joint Replacement</li>
+                    <li>Sports Medicine</li>
+                    <li>Spinal Surgery</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { text-align: center; background: #f5f5f5; color: #000; transition: background 0.3s, color 0.3s; }
+        
+        .dark-mode { background: #121212; color: #fff; }
+        
+        header { 
+            background: #007bff; color: white; padding: 15px; font-size: 28px; 
+            font-family: 'Montserrat', sans-serif; display: flex; align-items: center; 
+            justify-content: center; position: relative; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        .dark-mode header { background: #0056b3; }
+
+        .toggle-theme {
+            position: absolute; right: 20px; cursor: pointer; background: white; color: black;
+            border: none; padding: 5px 10px; border-radius: 20px; font-weight: bold;
+        }
+        .dark-mode .toggle-theme { background: black; color: white; }
+
+        nav { 
+            display: flex; justify-content: center; background: #0056b3; padding: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        .dark-mode nav { background: #003f7f; }
+
+        .testimonial-container {
+            margin: 30px auto; width: 80%; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+            border: #000 solid 2px; border-radius: 8px; padding: 20px;
+        }
+
+        .testimonial-card {
+            background: white; padding: 20px; border-radius: 10px; text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dark-mode .testimonial-card { background: #222; color: white; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); }
+
+        .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+        }
+
+        .testimonial-card img {
+            width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px; object-fit: cover;
+        }
+        .testtxt{
+            color: #007bff;
+            width: 100%;
+            font-size: 32px;
+            justify-content: center;
+            align-items: center;
+        }
+        .testimonial-text { font-style: italic; margin-bottom: 10px; }
+        .testimonial-name { font-weight: bold; color: #007bff; }
+        .dark-mode .testimonial-name { color: #4da6ff; }
+
+        footer { background: #333; color: white; padding: 15px; margin-top: 20px; font-size: 14px; }
+
+        nav a { 
+            color: white; text-decoration: none; margin: 0 15px; font-size: 18px; padding: 8px 12px; 
+            transition: 0.3s; 
+        }
+        nav a:hover { background: white; color: #0056b3; border-radius: 5px; font-weight: bold; }
+        .dark-mode nav a:hover { background: #222; color: #4da6ff; }
+
+        .banner { 
+            padding: 40px; background: linear-gradient(to right, #6a11cb, #2575fc); 
+            color: white; font-size: 24px; font-weight: bold; border-radius: 10px; margin: 20px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); font-family: 'Montserrat', sans-serif;
+        }
+        .typed-text { color: yellow; }
+
+        .swiper-container { width: 100%; overflow: hidden; position: relative; margin: auto; border-radius: 10px; }
+        .swiper-wrapper { display: flex; animation: slideAnimation 10s linear infinite; width: max-content; }
+        @keyframes slideAnimation { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        .swiper-container:hover .swiper-wrapper { animation-play-state: paused; }
+
+        .card { 
+            width: 250px; margin: 10px; padding: 15px; background: white; border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center; display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s; font-size: 16px;
+        }
+        .dark-mode .card { background: #222; color: white; box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+        }
+
+        .card img { width: 100px; height: 100px; border-radius: 10px; object-fit: cover; border: 0.5px solid #ccc; margin-bottom: 10px; }
+
+        .quote-container { margin: 20px auto; width: 90%; display: flex; justify-content: space-around; gap: 20px; }
+        .quote-card { 
+            font-size: 20px; font-weight: bold; padding: 30px; background: white; color: #007bff;
+            font-style: italic; border-radius: 10px; width: 30%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            border: 2px solid #007bff; transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dark-mode .quote-card { background: #222; color: #4da6ff; border: 2px solid #4da6ff; }
+
+        .quote-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+        }
+
+        footer { background: #333; color: white; padding: 15px; margin-top: 20px; font-size: 14px; }
+        .dark-mode footer { background: #000; }
+    </style>
+</head>
+<body>
+    <header>
+        CAREER COMPASS
+        <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Career Options</a>
+        <a href="http://127.0.0.1:5500/templates/courses.html">Courses</a>
+        <!-- <a href="#">Quiz</a> -->
+        <a href="http://localhost:5173/">Add Profile</a>
+        <a href="http://localhost:3000/">Contact Us</a>
+    </nav>
+
+    <div class="banner">Navigate Your Future with <span class="typed-text"></span></div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="card"><a href="engineering.html"><img src="Engineering.png" alt="Engineering"></a><p>Engineering - Explore Tech Fields</p></div>
+            <div class="card"><a href="medical.html"><img src="Medical.png" alt="Medical"></a><p>Medical - Healthcare & Research</p></div>
+            <div class="card"><a href="commerce.html"><img src="Commerce.png" alt="Commerce"></a><p>Commerce - Business & Finance</p></div>
+            <div class="card"><a href="arts.html"><img src="Arts.png" alt="Arts"></a><p>Arts - Creative & Design Fields</p></div>
+            <div class="card"><a href="diploma.html"><img src="Diploma.png" alt="Diploma"></a><p>Diploma - Skill-based Learning</p></div>
+        </div>
+    </div>
+
+    <div class="quote-container">
+        <div class="quote-card">“Dream big, start small, act now.”</div>
+        <div class="quote-card">“Success is a journey, not a destination.”</div>
+        <div class="quote-card">“Your future is created by what you do today.”</div>
+    </div>
+    <div class="testimonial-container">
+        <h3 class="testtxt">Testimonials</h3>
+        <div class="testimonial-card">
+            <img src="user.png" alt="User 1">
+            <p class="testimonial-text">"Career Compass helped me choose the right path. The quizzes and career guides are amazing!"</p>
+            <p class="testimonial-name">- Rahul Sharma</p>
+        </div>
+        <div class="testimonial-card">
+            <img src="user.png" alt="User 2">
+            <p class="testimonial-text">"Thanks to this platform, I found my passion for engineering and made the right career decision."</p>
+            <p class="testimonial-name">- Aditi Verma</p>
+        </div>
+        <div class="testimonial-card">
+            <img src="user.png" alt="User 3">
+            <p class="testimonial-text">"The career options and insights provided here were extremely helpful in my journey."</p>
+            <p class="testimonial-name">- Vikram Patel</p>
+        </div>
+        <div class="testimonial-card">
+            <img src="user.png" alt="User 4">
+            <p class="testimonial-text">"I was feeling lost and overwhelmed about my career choices, but the guidance I received from this website changed everything for me."</p>
+            <p class="testimonial-name">- Sarah Mane</p>
+        </div>
+        <div class="testimonial-card">
+            <img src="user.png" alt="User 4">
+            <p class="testimonial-text">"As a mid-career professional, I was unsure about my next steps and whether I was on the right track."</p>
+            <p class="testimonial-name">- Priya Mehta</p>
+        </div>
+        <div class="testimonial-card">
+            <img src="user.png" alt="User 4">
+            <p class="testimonial-text">"A must-visit platform for students. It gave me clarity about my future choices."</p>
+            <p class="testimonial-name">- David Rak</p>
+        </div>
+    </div>
+
+    <script>
+        var typed = new Typed(".typed-text", {
+            strings: ["Confidence!", "Engineering!", "Medicine!", "Business!", "Design!"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+    <footer>
+        <p>© 2025 Career Compass. All rights reserved.</p>
+    </footer>
+</body>
+</html>

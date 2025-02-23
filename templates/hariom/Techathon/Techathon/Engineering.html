@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Careers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        body { background: linear-gradient(135deg, #3b4f82, #1e3c72); color: white; text-align: center; padding: 20px; }
+        h1 { font-size: 36px; margin-bottom: 20px; animation: fadeIn 1.5s ease-in-out; color: #f0f8ff; }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p { font-size: 18px; margin-bottom: 15px; color: #d6e4f1; }
+
+        .branches { 
+            text-align: left; 
+            margin: 20px auto; 
+            padding: 15px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+        }
+
+        /* Add border to the images */
+        .branch img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ffcc00; /* Adds a yellow border */
+            display: block; /* Centers the image in the card */
+            margin-left: auto;  /* Centers horizontally */
+            margin-right: auto; /* Centers horizontally */
+        }
+
+        /* Justify content inside the card */
+        .branch {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* This ensures the content is spaced evenly */
+            height: 100%;
+        }
+
+        .branch:hover { 
+            background: #1e3c72; 
+            color: #ffcc00; 
+            transform: scale(1.05); 
+        }
+
+        .branch-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        .branch-description {
+            font-size: 16px;
+            color: #d6e4f1;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .branch ul {
+            text-align: left;
+            font-size: 16px;
+            color: #d6e4f1;
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin-top: 20px; 
+            background: #ffcc00; 
+            color: #333; 
+            font-weight: bold; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: 0.3s; 
+        }
+        .btn:hover { background: #ffaa00; transform: scale(1.1); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Engineering - Explore Technical Fields</h1>
+    
+    <div class="container">
+        <p>Engineering is a dynamic field that combines science, mathematics, and technology to develop innovative solutions for real-world problems.</p>
+        <p>Here are some major branches of engineering:</p>
+        
+        <div class="branches">
+            <!-- Mechanical Engineering -->
+            <div class="branch">
+                <img src="mechanical.png" alt="Mechanical Engineering">
+                <div class="branch-header">🛠️ Mechanical Engineering</div>
+                <div class="branch-description">
+                    Mechanical engineering involves the design, analysis, and manufacturing of mechanical systems. It’s a diverse field with applications ranging from aerospace to robotics.
+                </div>
+                <ul>
+                    <li>Design and Manufacturing</li>
+                    <li>Thermodynamics</li>
+                    <li>Fluid Mechanics</li>
+                </ul>
+            </div>
+
+            <!-- Computer Science Engineering -->
+            <div class="branch">
+                <img src="stem.png" alt="Computer Science Engineering">
+                <div class="branch-header">💻 Computer Science Engineering</div>
+                <div class="branch-description">
+                    Computer Science Engineering focuses on the design, development, and implementation of software and computer systems. It plays a key role in the digital world.
+                </div>
+                <ul>
+                    <li>Software Development</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Data Science & Big Data</li>
+                </ul>
+            </div>
+
+            <!-- Electrical Engineering -->
+            <div class="branch">
+                <img src="engineering (1).png" alt="Electrical Engineering">
+                <div class="branch-header">🔌 Electrical Engineering</div>
+                <div class="branch-description">
+                    Electrical engineering deals with the study and application of electricity, electronics, and electromagnetism. It powers everything from home appliances to industrial systems.
+                </div>
+                <ul>
+                    <li>Power Systems</li>
+                    <li>Control Systems</li>
+                    <li>Telecommunications</li>
+                </ul>
+            </div>
+
+            <!-- Civil Engineering -->
+            <div class="branch">
+                <img src="engineer.png" alt="Civil Engineering">
+                <div class="branch-header">🏗️ Civil Engineering</div>
+                <div class="branch-description">
+                    Civil engineering focuses on the design and construction of infrastructure like roads, bridges, and buildings. It plays a crucial role in the development of urban spaces.
+                </div>
+                <ul>
+                    <li>Structural Engineering</li>
+                    <li>Environmental Engineering</li>
+                    <li>Transportation Engineering</li>
+                </ul>
+            </div>
+
+            <!-- Mechatronics Engineering -->
+            <div class="branch">
+                <img src="mechatronics.png" alt="Mechatronics Engineering">
+                <div class="branch-header">⚙️ Mechatronics Engineering</div>
+                <div class="branch-description">
+                    Mechatronics engineering combines mechanical, electrical, and computer engineering to design and create intelligent systems and robotics.
+                </div>
+                <ul>
+                    <li>Automation Systems</li>
+                    <li>Robotics</li>
+                    <li>Control Systems</li>
+                </ul>
+            </div>
+
+            <!-- Aerospace Engineering -->
+            <div class="branch">
+                <img src="aerospace-engineering.png" alt="Aerospace Engineering">
+                <div class="branch-header">🛰️ Aerospace Engineering</div>
+                <div class="branch-description">
+                    Aerospace engineering focuses on the design and development of aircraft and spacecraft, with applications in air and space travel.
+                </div>
+                <ul>
+                    <li>Aircraft Design</li>
+                    <li>Space Exploration</li>
+                    <li>Flight Mechanics</li>
+                </ul>
+            </div>
+
+             <!-- Biomedical Engineering -->
+            <div class="branch">
+                <img src="genetic-engineering.png" alt="Biomedical Engineering">
+                <div class="branch-header">🩺 Biomedical Engineering</div>
+                <div class="branch-description">
+                    Biomedical engineering combines principles of biology and engineering to develop healthcare technologies such as medical devices, prosthetics, and diagnostic equipment.
+                </div>
+                <ul>
+                    <li>Medical Devices Design</li>
+                    <li>Biomaterials</li>
+                    <li>Medical Imaging</li>
+                </ul>
+            </div>
+
+            <!-- Agricultural Engineering -->
+            <div class="branch">
+                <img src="smart-farming.png" alt="Agricultural Engineering">
+                <div class="branch-header">🌱 Agricultural Engineering</div>
+                <div class="branch-description">
+                    Agricultural engineering integrates technology with agricultural science to improve farming processes and food production systems.
+                </div>
+                <ul>
+                    <li>Farm Machinery</li>
+                    <li>Soil Engineering</li>
+                    <li>Water Resources Engineering</li>
+                </ul>
+            </div>
+
+            <!-- Environmental Engineering -->
+            <div class="branch">
+                <img src="environmentalism.png" alt="Environmental Engineering">
+                <div class="branch-header">🌍 Environmental Engineering</div>
+                <div class="branch-description">
+                    Environmental engineering focuses on developing sustainable solutions for water, air, and waste management to improve environmental quality.
+                </div>
+                <ul>
+                    <li>Water Treatment</li>
+                    <li>Waste Management</li>
+                    <li>Environmental Impact Assessment</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce - Explore Fields of Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        body { background: linear-gradient(135deg, #3b4f82, #1e3c72); color: white; text-align: center; padding: 20px; }
+        h1 { font-size: 36px; margin-bottom: 20px; animation: fadeIn 1.5s ease-in-out; color: #f0f8ff; }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p { font-size: 18px; margin-bottom: 15px; color: #d6e4f1; }
+
+        .branches { 
+            text-align: left; 
+            margin: 20px auto; 
+            padding: 15px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+        }
+
+        .branch img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ffcc00;
+            display: block;
+            margin-left: auto;  
+            margin-right: auto; 
+        }
+
+        .branch {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .branch:hover { 
+            background: #1e3c72; 
+            color: #ffcc00; 
+            transform: scale(1.05); 
+        }
+
+        .branch-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        .branch-description {
+            font-size: 16px;
+            color: #d6e4f1;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .branch ul {
+            text-align: left;
+            font-size: 16px;
+            color: #d6e4f1;
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin-top: 20px; 
+            background: #ffcc00; 
+            color: #333; 
+            font-weight: bold; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: 0.3s; 
+        }
+        .btn:hover { background: #ffaa00; transform: scale(1.1); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Commerce - Explore Business Fields</h1>
+    
+    <div class="container">
+        <p>Commerce is a broad field that covers various aspects of business, trade, and finance. Here are some of the major fields in commerce:</p>
+        
+        <div class="branches">
+            <!-- Accounting -->
+            <div class="branch">
+                <img src="accounts.png" alt="Accounting">
+                <div class="branch-header">📊 Accounting</div>
+                <div class="branch-description">
+                    Accounting is the systematic process of recording and analyzing financial transactions. This field ensures businesses maintain proper financial records.
+                </div>
+                <ul>
+                    <li>Financial Accounting</li>
+                    <li>Management Accounting</li>
+                    <li>Tax Accounting</li>
+                    <li>Auditing</li>
+                </ul>
+            </div>
+
+            <!-- Business Administration -->
+            <div class="branch">
+                <img src="utilization.png" alt="Business Administration">
+                <div class="branch-header">💼 Business Administration</div>
+                <div class="branch-description">
+                    Business administration involves overseeing business operations and managing departments such as HR, marketing, and finance for optimal performance.
+                </div>
+                <ul>
+                    <li>Organizational Behavior</li>
+                    <li>Human Resources Management</li>
+                    <li>Operations Management</li>
+                    <li>Strategic Management</li>
+                </ul>
+            </div>
+
+            <!-- Finance -->
+            <div class="branch">
+                <img src="money.png" alt="Finance">
+                <div class="branch-header">💰 Finance</div>
+                <div class="branch-description">
+                    Finance involves the management of money, investments, and financial systems for individuals and corporations. This field also deals with risk management.
+                </div>
+                <ul>
+                    <li>Corporate Finance</li>
+                    <li>Investment Banking</li>
+                    <li>Risk Management</li>
+                    <li>Financial Planning</li>
+                </ul>
+            </div>
+
+            <!-- Marketing -->
+            <div class="branch">
+                <img src="social-media.png" alt="Marketing">
+                <div class="branch-header">📈 Marketing</div>
+                <div class="branch-description">
+                    Marketing is about promoting products or services and engaging with customers through various channels like digital platforms and advertising.
+                </div>
+                <ul>
+                    <li>Market Research</li>
+                    <li>Digital Marketing</li>
+                    <li>Brand Management</li>
+                    <li>Advertising and Promotions</li>
+                </ul>
+            </div>
+
+            <!-- Entrepreneurship -->
+            <div class="branch">
+                <img src="entrepreneurship.png" alt="Entrepreneurship">
+                <div class="branch-header">🚀 Entrepreneurship</div>
+                <div class="branch-description">
+                    Entrepreneurship is the process of starting and managing new businesses. Entrepreneurs create value by introducing innovative products or services.
+                </div>
+                <ul>
+                    <li>Business Development</li>
+                    <li>Innovation</li>
+                    <li>Startup Management</li>
+                    <li>Venture Capital</li>
+                </ul>
+            </div>
+
+            <!-- International Business -->
+            <div class="branch">
+                <img src="free-trade.png" alt="International Business">
+                <div class="branch-header">🌍 International Business</div>
+                <div class="branch-description">
+                    International business involves conducting commercial activities across national borders, including global trade, supply chains, and market expansion.
+                </div>
+                <ul>
+                    <li>Global Strategy</li>
+                    <li>International Trade</li>
+                    <li>Global Marketing</li>
+                    <li>Cross-Cultural Management</li>
+                </ul>
+            </div>
+
+            <!-- Retail Management -->
+            <div class="branch">
+                <img src="customer.png" alt="Retail Management">
+                <div class="branch-header">🏬 Retail Management</div>
+                <div class="branch-description">
+                    Retail management involves managing the day-to-day operations of retail businesses, ensuring customer satisfaction, sales, and inventory control.
+                </div>
+                <ul>
+                    <li>Store Management</li>
+                    <li>Customer Service</li>
+                    <li>Inventory Management</li>
+                    <li>Retail Strategy</li>
+                </ul>
+            </div>
+
+            <!-- E-Commerce -->
+            <div class="branch">
+                <img src="shopping.png" alt="E-Commerce">
+                <div class="branch-header">🛒 E-Commerce</div>
+                <div class="branch-description">
+                    E-commerce involves buying and selling goods online, leveraging digital platforms to manage orders, payments, and logistics.
+                </div>
+                <ul>
+                    <li>Online Retailing</li>
+                    <li>Digital Payments</li>
+                    <li>Logistics and Supply Chain</li>
+                    <li>Website Development</li>
+                </ul>
+            </div>
+
+            <!-- Supply Chain Management -->
+            <div class="branch">
+                <img src="supply-chain-management.png" alt="Supply Chain Management">
+                <div class="branch-header">📦 Supply Chain Management</div>
+                <div class="branch-description">
+                    Supply chain management focuses on the flow of goods and services from suppliers to customers, managing logistics, inventory, and procurement.
+                </div>
+                <ul>
+                    <li>Logistics Management</li>
+                    <li>Inventory Control</li>
+                    <li>Procurement</li>
+                    <li>Supply Chain Optimization</li>
+                </ul>
+            </div>
+
+            <!-- Business Analytics -->
+            <div class="branch">
+                <img src="statistics.png" alt="Business Analytics">
+                <div class="branch-header">📊 Business Analytics</div>
+                <div class="branch-description">
+                    Business analytics uses data and statistical analysis to help companies make informed business decisions, optimize processes, and predict trends.
+                </div>
+                <ul>
+                    <li>Data Analysis</li>
+                    <li>Predictive Analytics</li>
+                    <li>Big Data</li>
+                    <li>Decision-Making</li>
+                </ul>
+            </div>
+
+            <!-- Human Resource Management -->
+            <div class="branch">
+                <img src="leader.png" alt="Human Resource Management">
+                <div class="branch-header">👥 Human Resource Management</div>
+                <div class="branch-description">
+                    HRM involves managing employees, recruitment, training, and ensuring that employees' needs align with business objectives.
+                </div>
+                <ul>
+                    <li>Recruitment</li>
+                    <li>Employee Development</li>
+                    <li>Compensation and Benefits</li>
+                    <li>Labor Relations</li>
+                </ul>
+            </div>
+
+            <!-- Real Estate -->
+            <div class="branch">
+                <img src="agreement.png" alt="Real Estate">
+                <div class="branch-header">🏡 Real Estate</div>
+                <div class="branch-description">
+                    Real estate involves the buying, selling, and management of property. This field is essential for individuals and businesses to own or lease space.
+                </div>
+                <ul>
+                    <li>Property Management</li>
+                    <li>Real Estate Development</li>
+                    <li>Commercial and Residential Properties</li>
+                    <li>Real Estate Investment</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>

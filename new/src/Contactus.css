@@ -1,0 +1,120 @@
+/* App.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #005bb5;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  /* Contact Info */
+  .contact-info h2 {
+    color: #333333;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .contact-info a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Styles */
+  .contact-form h2 {
+    color: #333333;
+    margin-bottom: 15px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    outline: none;
+    border-color: #0073e6;
+  }
+  
+  form button {
+    background-color: #0073e6;
+    color: white;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Praise Text Section */
+  .praise-text h2 {
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .praise-text p {
+    font-size: 1em;
+    color: #555555;
+    line-height: 1.6;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    header h1 {
+      font-size: 1.5em;
+    }
+  }

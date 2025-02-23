@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts - Explore Fields</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        body { background: linear-gradient(135deg, #4e73df, #224abe); color: white; text-align: center; padding: 20px; }
+        h1 { font-size: 36px; margin-bottom: 20px; animation: fadeIn 1.5s ease-in-out; color: #f0f8ff; }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.1); 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p { font-size: 18px; margin-bottom: 15px; color: #d6e4f1; }
+
+        .branches { 
+            text-align: left; 
+            margin: 20px auto; 
+            padding: 15px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+        }
+
+        .branch img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ffcc00;
+            display: block;
+            margin-left: auto;  
+            margin-right: auto; 
+        }
+
+        .branch {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .branch:hover { 
+            background: #1e3c72; 
+            color: #ffcc00; 
+            transform: scale(1.05); 
+        }
+
+        .branch-header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        .branch-description {
+            font-size: 16px;
+            color: #d6e4f1;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .branch ul {
+            text-align: left;
+            font-size: 16px;
+            color: #d6e4f1;
+            margin-top: 10px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin-top: 20px; 
+            background: #ffcc00; 
+            color: #333; 
+            font-weight: bold; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: 0.3s; 
+        }
+        .btn:hover { background: #ffaa00; transform: scale(1.1); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Arts - Explore Fields</h1>
+    
+    <div class="container">
+        <p>The Arts stream provides a wide range of subjects that cultivate creative and intellectual thinking. These disciplines equip students with the tools to excel in various fields, including literature, history, languages, psychology, and more. Below are some of the key fields of study under the Arts stream:</p>
+
+        <h2>The Key Differences Between Arts and Other Streams:</h2>
+        <ul>
+            <li><strong>Focus on Creativity:</strong> Arts emphasizes creativity, critical thinking, and conceptual skills, unlike more technical or scientific fields.</li>
+            <li><strong>Career Path Flexibility:</strong> Arts students have diverse career opportunities in fields such as writing, design, journalism, teaching, social work, and research.</li>
+            <li><strong>Broad Range of Subjects:</strong> Students can choose from a variety of subjects that span history, politics, sociology, philosophy, and more.</li>
+        </ul>
+
+        <p>Here are some of the major branches available in Arts programs:</p>
+        
+        <div class="branches">
+            <!-- Literature -->
+            <div class="branch">
+                <img src="research.png" alt="Literature">
+                <div class="branch-header">📚 Literature</div>
+                <div class="branch-description">
+                    Literature involves the study of written works, including novels, poetry, drama, and prose across cultures and time periods.
+                </div>
+                <ul>
+                    <li>Literary Criticism</li>
+                    <li>Poetry Analysis</li>
+                    <li>World Literature</li>
+                    <li>Drama Studies</li>
+                </ul>
+            </div>
+
+            <!-- History -->
+            <div class="branch">
+                <img src="history.png" alt="History">
+                <div class="branch-header">🏺 History</div>
+                <div class="branch-description">
+                    History focuses on understanding past events, societies, and cultures to better comprehend the present and future.
+                </div>
+                <ul>
+                    <li>Ancient Civilizations</li>
+                    <li>Modern History</li>
+                    <li>World Wars</li>
+                    <li>Historical Research Methods</li>
+                </ul>
+            </div>
+
+            <!-- Political Science -->
+            <div class="branch">
+                <img src="political-science.png" alt="Political Science">
+                <div class="branch-header">⚖️ Political Science</div>
+                <div class="branch-description">
+                    Political science examines systems of governance, political behavior, international relations, and the theory and practice of politics.
+                </div>
+                <ul>
+                    <li>Political Theory</li>
+                    <li>International Relations</li>
+                    <li>Public Policy</li>
+                    <li>Political Philosophy</li>
+                </ul>
+            </div>
+
+            <!-- Psychology -->
+            <div class="branch">
+                <img src="philosophy.png" alt="Psychology">
+                <div class="branch-header">🧠 Psychology</div>
+                <div class="branch-description">
+                    Psychology studies the human mind, behavior, mental processes, and how individuals relate to their environment.
+                </div>
+                <ul>
+                    <li>Cognitive Psychology</li>
+                    <li>Developmental Psychology</li>
+                    <li>Clinical Psychology</li>
+                    <li>Behavioral Science</li>
+                </ul>
+            </div>
+
+            <!-- Sociology -->
+            <div class="branch">
+                <img src="sociology.png" alt="Sociology">
+                <div class="branch-header">👥 Sociology</div>
+                <div class="branch-description">
+                    Sociology explores society, social institutions, and human behavior in relation to cultural, economic, and political forces.
+                </div>
+                <ul>
+                    <li>Social Theory</li>
+                    <li>Research Methods</li>
+                    <li>Social Movements</li>
+                    <li>Cultural Sociology</li>
+                </ul>
+            </div>
+
+            <!-- Philosophy -->
+            <div class="branch">
+                <img src="philosophy.png" alt="Philosophy">
+                <div class="branch-header">💭 Philosophy</div>
+                <div class="branch-description">
+                    Philosophy delves into the fundamental nature of knowledge, reality, and existence, encouraging critical thinking and ethical reasoning.
+                </div>
+                <ul>
+                    <li>Ethics</li>
+                    <li>Metaphysics</li>
+                    <li>Logic</li>
+                    <li>Philosophy of Mind</li>
+                </ul>
+            </div>
+
+            <!-- Fine Arts -->
+            <div class="branch">
+                <img src="color-palette.png" alt="Fine Arts">
+                <div class="branch-header">🎨 Fine Arts</div>
+                <div class="branch-description">
+                    Fine arts encompasses the visual arts such as painting, sculpture, and drawing, along with other forms of creative expression.
+                </div>
+                <ul>
+                    <li>Painting</li>
+                    <li>Sculpture</li>
+                    <li>Digital Art</li>
+                    <li>Art History</li>
+                </ul>
+            </div>
+
+            <!-- Music -->
+            <div class="branch">
+                <img src="musical-note.png" alt="Music">
+                <div class="branch-header">🎶 Music</div>
+                <div class="branch-description">
+                    Music studies the theory, history, and performance of music, focusing on both classical and contemporary styles.
+                </div>
+                <ul>
+                    <li>Music Theory</li>
+                    <li>Music Composition</li>
+                    <li>Music History</li>
+                    <li>Performance Art</li>
+                </ul>
+            </div>
+
+            <!-- Journalism -->
+            <div class="branch">
+                <img src="news.png" alt="Journalism">
+                <div class="branch-header">📰 Journalism</div>
+                <div class="branch-description">
+                    Journalism involves reporting, writing, and analyzing news, providing a crucial service to society through information dissemination.
+                </div>
+                <ul>
+                    <li>News Writing</li>
+                    <li>Broadcast Journalism</li>
+                    <li>Investigative Reporting</li>
+                    <li>Digital Media</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html" class="btn">🔙 Back to Home</a>
+    </div>
+</body>
+</html>
